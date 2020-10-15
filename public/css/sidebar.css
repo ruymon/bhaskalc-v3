@@ -34,6 +34,8 @@ aside .sidebar footer button{
     overflow: hidden;
     margin-top: 2rem;
 
+    outline: none;
+
     transition: background-color 200ms;
 }
 
@@ -42,6 +44,18 @@ aside .sidebar footer button img{
     height: 3.5rem;
     border: none;
 
+    opacity: 50%;
+
+    transition: opacity 200s
+}
+
+aside .sidebar footer button:hover {
+    background-color: #17D6EB;
+    
+}
+
+aside .sidebar footer button img:hover {
+    opacity: 100%;
 }
 
 .with-sidebar{

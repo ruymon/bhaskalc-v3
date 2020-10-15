@@ -2,8 +2,13 @@
     display: flex;
     height: 100%;
     width: 100%;
-    background-image: url("../images/math_bg_light.svg");
     background-color: #CEDEE5;
+    background-image: url("../images/math_bg_light.svg");
+    background-repeat: repeat;
+    background-size: 50%;
+    background-position: center center;
+    background-attachment: fixed;
+    
 }
 
 #page-input p{
@@ -17,6 +22,8 @@ main{
 }
 
 .input-area{
+    display: none; 
+
     padding: 5.7rem;
     z-index: 10;
 
