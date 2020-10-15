@@ -1,0 +1,86 @@
+body, input, button, textarea{
+    font: 400 2rem/1 'Titillium Web', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*não vai somar os paddings nas medidas*/
+}
+
+body{
+    height: 100vh; /*vh = viewport height, ocupa toda a tela*/
+    color:white;
+    background: #ebf2f5;
+}
+
+:root  {
+    font-size: 62.5%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.page-mobile-warn {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: #29292E;
+
+    }
+
+    #page-input{
+        
+        display: none !important; 
+    }
+
+    .page-mobile-warn {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+                
+        height: 100%;
+        width: 100%;
+
+
+        overflow: hidden;
+    }
+
+    .mobile-warn-header {
+        padding-top: 5vh;
+
+    }
+
+
+
+    .mobile-warn-header h1 {
+        margin: 0;
+
+        font-weight: bold;
+        font-size: 4rem;
+
+        color: white;
+    }
+
+    .mobile-warn-main {
+        padding: 0 1rem;
+        position: absolute;
+        bottom: 0;
+
+        margin-bottom: 4vh;
+
+    }
+
+    .mobile-warn-main p {
+        
+        font-weight: regular;
+        font-size: 2.5rem;
+        
+        color: white;
+
+        text-align: center;
+
+    }
+    
+    
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bhaskalc-v3</title>
+    <link rel="icon" href="./public/images/logo.svg" />
+
+    <!--#region css-->
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/page-input.css">
+    <link rel="stylesheet" href="./public/css/sidebar.css">
+    <!--#endregion-->
+
+    <!--#region fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--#endregion-->
+
+</head>
+
+<body>
+    <div class="page-mobile-warn">
+        <div class="mobile-warn-header">
+            <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
+            <h1>Bhaskalc</h1>
+        </div>
+
+        <div class="mobile-warn-main">
+            <img src="./public/images/sad.svg" alt="Sad Ilustration">
+            <p>Bhaskalc still does not supports mobile devices.</p>
+        </div>
+    </div>
+    <div id="page-input">
+
+        <aside>
+            <div class="sidebar">
+                <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
+                <footer>
+                
+                    <!--documentation-->
+                    <button>
+                        <img src="./public/images/icon_document.svg" alt="Documentation" title="Check our documentation">
+                    </button>
+
+                    <!--github-->
+                    <button>
+                        <img src="./public/images/github.svg" alt="Github" title="Visit our repository">
+                    </button>
+                    
+                    <!--darkmode-->
+                    <button>
+                        <img src="./public/images/icon_moon.svg" alt="Darkmde" title="Toggle dark/light mode">
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </aside>
+
+        <main class="with-sidebar">
+            <div class="background-pattern">
+                <!-- <img src="./public/images/math_bg_light.svg" alt=""> -->
+            </div>
+
+            <div class="input-area">
+                    <header>
+                        <h1>Bhaskalc</h1>
+                        <p>Type of equation to be calculated:</p>
+                        <div class="input-buttons">
+                            <a id="first-degree" href="" title="First degree equation">
+                                First degree
+                            </a>
+                            <div class="input-buttons-border"></div>
+                            <a id="second-degree" href="" title="Second degree equation">
+                                Second degree
+                            </a>
+                        </div>
+                        <div class="input-button-icons">
+                            <img src="./public/images/icon_first_degree.svg" alt="First degree equation icon">
+                            <img src="./public/images/icon_second_degree.svg" alt="Second degree equation icon">
+                        </div>
+                    </header>
+                    <hr>
+                    <!--this form only applies when "first degree" is selected
+                    <form id="first-degree-form">
+                        <fieldset>
+                            <div class="input-block">
+                                <label for="fd-a">Coeficient A</label>
+                                <input id="fd-a" name="fd-a" required>
+                            </div>
+                            <div class="input-block">
+                                <label for="fd-b">Coeficient B</label>
+                                <input id="fd-b" name="fd-b" required>
+                            </div>
+                        </fieldset>
+                    </form> -->
+                    <!--this form only applies when "second degree" is selected-->
+                    <form id="second-degree-form">
+                        <p>Fill in the coeficients from the parable:</p>
+                        <fieldset>
+                            <!--A-->
+                            <div class="input-block">
+                                <label for="sd-a">Coeficient A</label>
+                                <input placeholder="𝑎𝑥²" id="sd-a" name="sd-a" required>
+                            </div>
+
+                            <!--B-->
+                            <div class="input-block">
+                                <label for="sd-b">Coeficient B</label>
+                                <input placeholder="𝑏𝑥" id="sd-b" name="sd-b" required>
+                            </div>
+                            
+                            <!--C-->
+                            <div class="input-block">
+                                <label for="sd-c">Coeficient C</label>
+                                <input placeholder="𝑐" id="sd-c" name="sd-c" required>
+                            </div>
+                        </fieldset>
+                    </form>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

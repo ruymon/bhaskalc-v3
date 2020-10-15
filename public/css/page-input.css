@@ -1,0 +1,154 @@
+#page-input{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/math_bg_light.svg");
+    background-color: #CEDEE5;
+}
+
+#page-input p{
+    color: #8FA7B2;
+    font-weight: 600;
+}
+
+
+main{
+    flex: 1;
+}
+
+.input-area{
+    padding: 5.7rem;
+    z-index: 10;
+
+    margin: auto;
+    margin-top: 5rem;
+
+    background-color: white;
+
+    height: 90vh;
+    width: 60rem;
+
+    border-radius: 3rem;
+    border: 1px solid #D3E2E5;
+
+
+    
+}
+
+.input-area header button{  
+    display: inline-block;
+}
+
+
+.input-area header h1{
+    font-weight: 700;
+    font-size: 6rem;
+    color: #4D6F80;
+    margin-bottom: 2rem;
+}
+
+
+.input-buttons{
+    background-color: #f5f8fa;
+    border-radius: 2rem;
+    border: 1px solid #d3e2e5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 1rem;
+
+    width: 100%;
+    height: 4rem;
+}
+
+.input-buttons a{
+    padding-top: 1.15rem;
+
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+
+    color: #8fa7b2;
+    font: 600 1.6rem/1 'Nunito', sans-serif;
+
+    transition: background 0.3s, border-radius 0.3s, border-color 0.3s;
+}
+
+#first-degree:hover{
+    background: #EFFEFF;
+    border-color: #D3E2E5;
+    border-radius: 2rem 0 0 2rem;
+}
+
+#second-degree:hover{
+    background: #EFFEFF;
+    border-color: #D3E2E5;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.input-buttons-border {
+    border-left: 2px solid #d3e2e5;
+    height: 100%;
+}
+
+.input-button-icons{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.input-button-icons img:first-child{
+    margin-right: 18rem;
+}
+
+hr{
+    height: 1px;
+    border-top: 1px solid #D3E2E5;
+    width: 100%;
+    margin: 5rem 0;
+}
+
+
+form fieldset{
+    margin-top: 2rem;
+    display: block;
+    border: 0;
+}
+
+.input-block + .input-block{
+    margin-top: 5rem;
+}
+
+.input-block label{
+    color: #8FA7B2;
+    font-weight: 600;
+}
+
+.input-block input{
+    width: 100%;
+    height: 6rem;
+
+    margin-top: 1rem;
+
+    background-color: #F5F8FA;
+
+    border-radius: 2rem;
+    border: 1px solid #d2e2e5;
+
+    color:#8FA7B2;
+    padding: 0 1rem;
+}
+.input-block input::placeholder{
+
+    color:#8FA7B2;
+
+}
+
+input{
+    outline: none;
+}
