@@ -84,6 +84,10 @@ main{
     transition: background 0.3s, border-radius 0.3s, border-color 0.3s;
 }
 
+.deactive{
+    display: none;
+}
+
 #first-degree:hover{
     background: #EFFEFF;
     border-color: #D3E2E5;

@@ -17,6 +17,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
     <!--#endregion-->
 
+    <!--#region libs-->
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script> <!--graph lib-->
+    <!--#endregion-->
+
 </head>
 
 <body>
@@ -58,8 +62,8 @@
         </div>
 
         <hr>
-        <div class="result-intersection">
-            <p>Intersection with Y Axis (x = 0)</p>
+        <div class="result-intercept">
+            <p>Intercept with Y Axis (x = 0)</p>
             <h1>( x , y)</h1>
         </div>
 
@@ -67,11 +71,11 @@
     </aside>
 
     <main>
-        <div class="graph">
+        <div class="graph" id="graph">
 
         </div>
     </main>
-    
+    <script src="./public/js/function-plot.js"></script>
 </body>
 
 </html>

@@ -78,16 +78,4 @@ main .content a{
         padding: 7vh 4vw;
         width: 100%;
     }
-
-    main header h1{
-        font-size: clamp(10vw, 12vw, 13vw);
-    }
-
-    main .content h3{
-        font-size: clamp(7vw, 7vw, 9vw);
-    }
-
-    main .content p{
-        font-size: clamp(2.5vw, 3vw, 4vw)
-    }
 }

@@ -4,12 +4,12 @@ aside{
     padding: 2vw;
 
     min-height: 100vh;
-    width: 25vw;
+    width: 30vw;
 }
 
 aside header h3{
     color: #4D6F80;
-    font-size: 2.5vw;
+    font-size: clamp(2vw, 3rem, 5vw);
 
     margin-bottom: 2vh;
 }
@@ -18,7 +18,7 @@ aside div {
     color: #8FA7B2;
 
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: clamp(1vw, 2.3rem, 3vw);
     line-height: 1.5;
 
     margin: 1.5vh 0;
@@ -27,7 +27,7 @@ aside div {
 aside div h1{
     margin: 2vh 0;
     text-align: center;
-    font-size: 5rem;
+    font-size: clamp(2vw, 5rem, 5vw);
 }
 
 aside hr{
@@ -52,4 +52,36 @@ aside a{
 
 .graph{
     background-color: #CEDEE5;
+}
+
+@media (max-width: 500px){
+    aside{
+        padding-top: 3vh;
+        min-width: 100vw;
+    }
+
+    aside div h1{
+        font-size: clamp(5vw, 5rem, 8vw);
+    }
+
+    aside div {
+
+        font-size: clamp(2vw, 2rem, 6vw);
+    }
+
+    aside header h3{
+        font-size: clamp(8vw, 11vw, 12vw);
+    }
+
+    header h1{
+        font-size: clamp(10vw, 12vw, 13vw);
+    }
+
+    .content h3{
+        font-size: clamp(7vw, 7vw, 9vw);
+    }
+
+    .content p{
+        font-size: clamp(2.5vw, 3vw, 4vw)
+    }
 }
