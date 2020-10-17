@@ -24,7 +24,7 @@ body{
 }
 
 @media (max-width: 500px) {
-    body {
+    /* body {
         background-color: #29292E;
 
     }
@@ -96,7 +96,7 @@ body{
 
         text-align: center;
 
-    }
+    } */
     
     
 }

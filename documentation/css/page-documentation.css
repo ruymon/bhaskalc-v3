@@ -1,0 +1,93 @@
+:root{
+    font-size: 67.5%;
+}
+body, input, p, h3, h1, h2{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+
+    margin: 0;
+    background-color: rgb(170, 235, 199);
+    overflow-x: hidden;
+
+}
+
+main{
+    background-color: white;
+    background-clip: padding-box;      
+    
+    width: clamp(74vw, 75vw, 80vw);
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 3vw;
+}
+
+main header h1{
+    font-weight: 900;
+    font-size: clamp(7vw, 7.5vw, 8vw);
+}
+
+main .list-of-contents h4{
+    font-size: clamp(0.8vw, 1.2vw, 1.2vw);
+}
+main .list-of-contents a{
+    display: block;
+    text-decoration: underline;
+    text-decoration-color: #7f8683;
+
+    margin-top: 1vh;
+
+    color: #7f8683;
+    font-size: clamp(1.2vw, 2rem, 3vw);
+}
+
+main .content h3{
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #bfc8dd;
+    font-size: clamp(2rem, 2.5vw, 3vw);
+    margin-top: 10rem;
+}
+
+main .content p{
+    font-size: clamp(1.5rem, 1.5vw, 1.7vw)
+}
+
+main .content a{
+    text-decoration: none;
+    color: rgb(100, 165, 129);
+}
+
+.changelog{
+    background-color: #e0e0e0;
+    height: 25vh;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.changelog ul li, .changelog strong{
+    font-size: 2rem;
+}
+
+@media(max-width: 480px){
+    main{
+        padding: 7vh 4vw;
+        width: 100%;
+    }
+
+    main header h1{
+        font-size: clamp(10vw, 12vw, 13vw);
+    }
+
+    main .content h3{
+        font-size: clamp(7vw, 7vw, 9vw);
+    }
+
+    main .content p{
+        font-size: clamp(2.5vw, 3vw, 4vw)
+    }
+}

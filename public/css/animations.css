@@ -1,0 +1,27 @@
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes move-right{
+    from{
+        transform: translateX(-100%)
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.animation-appear{
+    /*fades in*/
+    animation: appear 1500ms backwards;
+}
+
+.animation-move-right{
+    /*appears from left side of screen going right*/
+    animation: move-right 1000ms backwards;
+}

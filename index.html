@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Bhaskalc-v3</title>
+    <title>Bhaskalc-v3</title>
     <link rel="icon" href="./public/images/logo.svg" />
 
     <!--#region css-->
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/page-input.css">
     <link rel="stylesheet" href="./public/css/sidebar.css">
+    <link rel="stylesheet" href="./public/css/animations.css">
     <!--#endregion-->
 
     <!--#region fonts-->
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+    <!--Warns if you're using any mobile device-->
     <div class="page-mobile-warn">
         <div class="mobile-warn-header">
             <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
@@ -31,40 +33,41 @@
             <p>Bhaskalc still does not supports mobile devices.</p>
         </div>
     </div>
-    <div id="page-input">
 
+    <div id="page-input">
+        <!--sidebar-->
         <aside>
-            <div class="sidebar">
+            <div class="sidebar animation-move-right">
                 <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
                 <footer>
                 
                     <!--documentation-->
-                    <button>
-                        <img src="./public/images/icon_document.svg" alt="Documentation" title="Check our documentation">
-                    </button>
+                    <a target="_blank" href="./documentation/documentation-index.html" title="Check our documentation">
+                        <img src="./public/images/icon_document.svg" alt="Documentation">
+                    </a>
 
                     <!--github-->
-                    <button>
-                        <img src="./public/images/github.svg" alt="Github" title="Visit our repository">
-                    </button>
+                    <a href="https://github.com/ruymon/BhasKalc" target="_blank" title="Visit our repository">
+                        <img src="./public/images/github.svg" alt="Github" >
+                    </a>
                     
                     <!--darkmode-->
-                    <button>
-                        <img src="./public/images/icon_moon.svg" alt="Darkmde" title="Toggle dark/light mode">
-                    </button>
+                    <a title="Toggle dark/light mode">
+                        <img src="./public/images/icon_moon.svg" alt="Darkmode">
+                    </a>
 
                 </footer>
 
             </div>
 
         </aside>
-
+        
         <main class="with-sidebar">
             <div class="background-pattern">
                 <!-- <img src="./public/images/math_bg_light.svg" alt=""> -->
             </div>
 
-            <div class="input-area">
+            <div class="input-area animation-appear">
                     <header>
                         <h1>Bhaskalc</h1>
                         <p>Type of equation to be calculated:</p>
@@ -103,26 +106,31 @@
                             <!--A-->
                             <div class="input-block">
                                 <label for="sd-a">Coeficient A</label>
-                                <input placeholder="𝑎𝑥²" id="sd-a" name="sd-a" required>
+                                <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert 𝑥² coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient A = 4">
+                                <input type="number" placeholder="𝑎𝑥²" id="sd-a" name="sd-a" required>
                             </div>
 
                             <!--B-->
                             <div class="input-block">
                                 <label for="sd-b">Coeficient B</label>
-                                <input placeholder="𝑏𝑥" id="sd-b" name="sd-b" required>
+                                <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert 𝑥 coeficient    -    Ex: 4𝑥² + 2𝑥 + 6, coeficient B = 2">
+                                <input type="number" placeholder="𝑏𝑥" id="sd-b" name="sd-b" required>
                             </div>
                             
                             <!--C-->
                             <div class="input-block">
                                 <label for="sd-c">Coeficient C</label>
-                                <input placeholder="𝑐" id="sd-c" name="sd-c" required>
+                                <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert independent coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient C = 6">
+                                <input type="number" placeholder="𝑐" id="sd-c" name="sd-c" required>
                             </div>
                         </fieldset>
                     </form>
+
+                    <a href="" class="calculate-button">
+                        Calculate
+                    </a>
             </div>
-
         </main>
-
     </div>
 </body>
 

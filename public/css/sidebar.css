@@ -15,7 +15,7 @@ aside .sidebar{
 
 
 
-aside .sidebar footer button{
+aside .sidebar footer a{
     width: 4.8rem;
     height: 4.8rem;
     border: none;
@@ -39,7 +39,7 @@ aside .sidebar footer button{
     transition: background-color 200ms;
 }
 
-aside .sidebar footer button img{
+aside .sidebar footer a img{
     width: 3.5rem;
     height: 3.5rem;
     border: none;
@@ -49,15 +49,28 @@ aside .sidebar footer button img{
     transition: opacity 200s
 }
 
-aside .sidebar footer button:hover {
+aside .sidebar footer a:hover {
     background-color: #17D6EB;
     
 }
 
-aside .sidebar footer button img:hover {
+aside .sidebar footer a img:hover {
     opacity: 100%;
 }
 
 .with-sidebar{
     padding-left: 100px;
+}
+
+@media (max-width: 500px) {
+
+    aside{
+        display: none;
+
+    }
+
+    .with-sidebar{
+        padding-left: 0 !important;
+    }
+
 }

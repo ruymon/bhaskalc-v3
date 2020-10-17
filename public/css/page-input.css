@@ -22,7 +22,6 @@ main{
 }
 
 .input-area{
-    display: none; 
 
     padding: 5.7rem;
     z-index: 10;
@@ -32,13 +31,13 @@ main{
 
     background-color: white;
 
-    height: 90vh;
-    width: 60rem;
+    height: clamp(80vh, 90vh, 100vh);
+    width: clamp(30rem, 60rem, 60rem);
+
+    box-sizing: border-box;
 
     border-radius: 3rem;
     border: 1px solid #D3E2E5;
-
-
     
 }
 
@@ -48,7 +47,7 @@ main{
 
 
 .input-area header h1{
-    font-weight: 700;
+    font-weight: 600;
     font-size: 6rem;
     color: #4D6F80;
     margin-bottom: 2rem;
@@ -70,7 +69,7 @@ main{
 }
 
 .input-buttons a{
-    padding-top: 1.15rem;
+    padding-top: 1.15vh;
 
     text-align: center;
 
@@ -110,14 +109,14 @@ main{
 }
 
 .input-button-icons img:first-child{
-    margin-right: 18rem;
+    margin-right: clamp(15rem, 18rem, 18rem);
 }
 
 hr{
     height: 1px;
     border-top: 1px solid #D3E2E5;
     width: 100%;
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 
@@ -128,7 +127,7 @@ form fieldset{
 }
 
 .input-block + .input-block{
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .input-block label{
@@ -156,6 +155,97 @@ form fieldset{
 
 }
 
+.calculate-button{
+    text-decoration: none;
+
+    background-color: #37C77F;
+    color: #ffffff;
+
+    font: 800 2rem/1 'Nunito', sans-serif;
+
+    border-radius: 2rem;
+    margin-top: 6vh;
+
+    justify-content: center;
+    text-align: center;
+    display: block;
+
+    height: 8vh;
+    width: 100%;
+
+    padding: 3vh 5vw;
+    transition: background-color 300ms;
+    
+}
+
+.calculate-button:hover{
+    background-color: #3EE08F;
+}
+
 input{
     outline: none;
+}
+
+@media (max-width: 500px) {
+    .background-pattern{
+        display: none;
+    }
+
+    .input-area{
+        margin: 0;
+        padding: 5vh   clamp(2vw, 5vw, 6vw);
+        border-radius: 0;
+
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .input-area header h1{
+        font-weight: 700;
+        font-size: 4rem;
+        color: #4D6F80;
+    }
+    .input-area p{
+        font-weight: 700;
+        font-size: clamp(2vw, 1.5rem, 5vw);
+        color: #4D6F80;
+    }
+
+    .input-buttons{
+        margin-top: clamp(2vw, 5vw, 6vw);   
+        height: 5vh;
+    }
+
+    .input-buttons a{
+        font-size: clamp(1.2rem, 3.5vw, 4vw)
+    }
+
+    .input-button-icons img:first-child{
+        margin-right: clamp(5rem, 6rem, 10rem);
+    }
+
+    hr{
+        margin: 3vh 0;
+    }
+
+    form fieldset{
+        margin-top: 3vh
+    }
+
+    form fieldset .input-block label{
+        font-size: clamp(1vh, 1.5rem, 3vh);
+    }
+
+    form fieldset .input-block + .input-block{
+        margin-top: 2vh;
+    }
+
+    form fieldset .input-block input{
+        height: 8vh;
+    }
+
+    .calculate-button{
+        margin-bottom: 10vh;
+    }
+
 }
