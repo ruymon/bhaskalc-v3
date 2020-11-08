@@ -2,7 +2,7 @@ aside .sidebar{
     z-index: 10;
     position: fixed;
     height: 100%;
-    padding: 4rem 1.5rem;
+    padding: 4rem 1rem;
     background-color: #15c3d6;
 
     display: flex;

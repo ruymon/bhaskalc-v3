@@ -5,7 +5,7 @@
     background-color: #CEDEE5;
     background-image: url("../images/math_bg_light.svg");
     background-repeat: repeat;
-    background-size: 50%;
+    background-size: 100vh;
     background-position: center center;
     background-attachment: fixed;
     
@@ -18,7 +18,11 @@
 
 
 main{
+
     flex: 1;
+    display: flex;
+    align-items: center;
+
 }
 
 .input-area{
@@ -27,11 +31,13 @@ main{
     z-index: 10;
 
     margin: auto;
-    margin-top: 5rem;
+     
+    /* margin-top: 5rem;    <-- XGH Eh coisa de manicaca!!!! */
 
     background-color: white;
 
-    height: clamp(80vh, 90vh, 100vh);
+    /* height: clamp(80vh, 90vh, 80vh); */
+
     width: clamp(30rem, 60rem, 60rem);
 
     box-sizing: border-box;
@@ -173,11 +179,10 @@ form fieldset{
     justify-content: center;
     text-align: center;
     display: block;
-
-    height: 8vh;
+    
     width: 100%;
 
-    padding: 3vh 5vw;
+    padding: 30px;
     transition: background-color 300ms;
     
 }
