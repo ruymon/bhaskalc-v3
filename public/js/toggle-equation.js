@@ -1,16 +1,18 @@
 //this script is responsible for toggling .deactive class from .first-degree-form and .second-degree-form
+
 var isFirstDegree;
+
 function firstDegree(){
     isFirstDegree = true;
     toggleClass();
 
-    console.log("firstdegree true")
+   // console.log("firstdegree true")
 }
 function secondDegree(){
     isFirstDegree = false;
     toggleClass();
 
-    console.log("firstdegree false")
+   // console.log("firstdegree false")
 }
 function toggleClass(){
     //gets the div that holds both linear and quadratic equations input fields

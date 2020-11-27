@@ -7,43 +7,104 @@
     <title>Bhaskalc-v3</title>
     <link rel="icon" href="./public/images/logo.svg" />
 
-    <!--#region css-->
-    <link rel="stylesheet" href="./public/css/main.css">
-    <link rel="stylesheet" href="./public/css/page-input.css">
-    <link rel="stylesheet" href="./public/css/sidebar.css">
-    <link rel="stylesheet" href="./public/css/animations.css">
-    <!--#endregion-->
+    <!-- --------------- -->
+    <!--#Link CSS Styles-->
+    <!-- --------------- -->
 
-    <!--#region fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
-    <!--#endregion-->
+        <link rel="stylesheet" href="./public/css/main.css">
 
-    <!--#region libs-->
-    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script> <!--graph lib-->
-    <!--#endregion-->
+        <link rel="stylesheet" href="./public/css/animations.css">
+
+        <link rel="stylesheet" href="./public/css/mobile-warn.css">
+
+        <link rel="stylesheet" href="./public/css/page-loader.css">
+
+        <link rel="stylesheet" href="./public/css/sidebar.css">
+        <link rel="stylesheet" href="./public/css/page-input.css">
+
+        <link rel="stylesheet" href="./public/css/page-output.css">
+
+    <!--# End Link -->  
+
+    <!-- --------------- -->
+    <!--#Link Fonts      -->
+    <!-- --------------- -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!--# End Link Fonts -->
+
+    <!-- --------------- -->
+    <!--# Import Librarys-->
+    <!-- --------------- -->
+    
+        <!-- Function Plot lib -->
+        <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+        <!--#end graph lib-->
+
+        <!-- jQuery Lib -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!--#end jQuery-->
+
+        <!-- spinner lib -->
+        <link rel="stylesheet" type="text/css" href="./public/lib/loading-bar/loading-bar.css" />
+        <script type="text/javascript" src="./public/lib/loading-bar/loading-bar.js"></script>
+        <!--#end Spinner -->
+
+    <!--# End Import -->    
+
+    <!-- ----------------------- -->
+    <!--# Import Bhaskalc CORE Js-->
+    <!-- ----------------------- -->
+        
+        <script src="./public/js/main.js"></script>
+        <script src="./public/js/toggle-equation.js"></script>
+        
+        <!-- **IMPORTANT** -->
+        <script src="./public/js/first-degree.js"></script>
+        <script src="./public/js/second-degree.js"></script>
+        <!-- **IMPORTANT** -->
+      
+    <!--# End Import -->  
 </head>
 
-<body>
-    <!--Warns if you're using any mobile device-->
-    <div class="page-mobile-warn">
-        <div class="mobile-warn-header">
-            <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
-            <h1>Bhaskalc</h1>
-        </div>
+<body onLoad="loadingScreenTimer();">
+<!-- NO JAVASCRIPT  - [ ERROR ] -->  
+    <noscript>
+		You need to enable JavaScript to run this app.
+    </noscript>
+<!-- END NO SCRIPTS - [ ERROR ] -->
 
-        <div class="mobile-warn-main">
-            <img src="./public/images/sad.svg" alt="Sad Ilustration">
-            <p>Bhaskalc still does not supports mobile devices.</p>
-        </div>
+<!-- PAGE LOADER - [ LOADING SCREEN ] -->  
+    <div id="page-loader">
+        <main>
+            <!-- Loader -->
+            <div 
+                class="ldBar label"
+                data-type="fill" 
+                data-img="./public/images/logo.svg"
+                style="width: 100%; height: 8em;"
+                data-img-size="200,200"
+                data-fill-background="#9df"
+                data-fill-background-extrude="0"
+                data-transition-in="2" 
+                data-duration="3"
+                data-value="100">
+            </div>
+                   
+        </main>
     </div>
 
+<!-- END PAGE LOADER -->
+
+<!-- PAGE INPUT - [CLIENT FORM ] -->
     <div id="page-input">
         <!--sidebar-->
-        <aside>
+        <aside id="input-aside">
             <div class="sidebar animation-move-right">
                 <img src="./public/images/logo.svg" alt="Bhaskalc Logo">
                 <footer>
-                
+
                     <!--documentation-->
                     <a target="_blank" href="./documentation/documentation-index.html" title="Check our documentation">
                         <img src="./public/images/icon_document.svg" alt="Documentation">
@@ -51,9 +112,9 @@
 
                     <!--github-->
                     <a href="https://github.com/ruymon/BhasKalc" target="_blank" title="Visit our repository">
-                        <img src="./public/images/github.svg" alt="Github" >
+                        <img src="./public/images/github.svg" alt="Github">
                     </a>
-                    
+
                     <!--darkmode-->
                     <a title="Toggle dark/light mode">
                         <img src="./public/images/icon_moon.svg" alt="Darkmode">
@@ -64,85 +125,209 @@
             </div>
 
         </aside>
-        
+
         <main class="with-sidebar">
-            <div class="background-pattern">
-                <!-- <img src="./public/images/math_bg_light.svg" alt=""> -->
-            </div>
 
             <div class="input-area animation-appear">
-                    <header>
-                        <h1>Bhaskalc</h1>
-                        <p>Type of equation to be calculated:</p>
-                        <div class="input-buttons">
-                            <a id="first-degree" onclick="firstDegree()" title="First degree equation">
-                                First degree
-                            </a>
-                            <div class="input-buttons-border"></div>
-                            <a id="second-degree" onclick="secondDegree()" title="Second degree equation">
-                                Second degree
-                            </a>
-                        </div>
-                        <div class="input-button-icons">
-                            <img src="./public/images/icon_first_degree.svg" alt="First degree equation icon">
-                            <img src="./public/images/icon_second_degree.svg" alt="Second degree equation icon">
-                        </div>
-                    </header>
-                    <hr>
-                    <div class="input-forms">
-                        <!--this form only applies when "first degree" is selected-->
-                        <form id="first-degree-form">
-                            <p>Fill in the coeficients from the linear equation:</p>
-                            <fieldset>
-                                <div class="input-block">
-                                    <label for="fd-a">Coeficient A</label>
-                                    <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert 𝑥 coeficient   -    Ex: 2𝑥 + 6, coeficient A = 2">
-                                    <input id="fd-a" name="fd-a" placeholder="𝑥" required>
-                                </div>
-                                <div class="input-block">
-                                    <label for="fd-b">Coeficient B</label>
-                                    <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert independent coeficient   -    Ex: 2𝑥 + 6, coeficient B = 6">
-                                    <input id="fd-b" name="fd-b" placeholder="𝒃" required>
-                                </div>
-                            </fieldset>
-                        </form>
-
-                        <!--this form only applies when "second degree" is selected-->
-                        <form id="second-degree-form" class="deactive">
-                            <p>Fill in the coeficients from the quadratic equation:</p>
-                            <fieldset>
-                                <!--A-->
-                                <div class="input-block">
-                                    <label for="sd-a">Coeficient A</label>
-                                    <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert 𝑥² coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient A = 4">
-                                    <input type="number" placeholder="𝑎𝑥²" id="sd-a" name="sd-a" required>
-                                </div>
-
-                                <!--B-->
-                                <div class="input-block">
-                                    <label for="sd-b">Coeficient B</label>
-                                    <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert 𝑥 coeficient    -    Ex: 4𝑥² + 2𝑥 + 6, coeficient B = 2">
-                                    <input type="number" placeholder="𝑏𝑥" id="sd-b" name="sd-b" required>
-                                </div>
-                                
-                                <!--C-->
-                                <div class="input-block">
-                                    <label for="sd-c">Coeficient C</label>
-                                    <img src="./public/images/icon_info.svg" alt="Info icon" title="Insert independent coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient C = 6">
-                                    <input type="number" placeholder="𝑐" id="sd-c" name="sd-c" required>
-                                </div>
-                            </fieldset>
-                        </form>
+                <header>
+                    <h1>Bhaskalc</h1>
+                    <p>Type of equation to be calculated:</p>
+                    <div class="input-buttons">
+                        <a id="first-degree" onclick="firstDegree()" title="First degree equation">
+                            First degree
+                        </a>
+                        <div class="input-buttons-border"></div>
+                        <a id="second-degree" onclick="secondDegree()" title="Second degree equation">
+                            Second degree
+                        </a>
                     </div>
+                    <div class="input-button-icons">
+                        <img src="./public/images/icon_first_degree.svg" alt="First degree equation icon">
+                        <img src="./public/images/icon_second_degree.svg" alt="Second degree equation icon">
+                    </div>
+                </header>
+                <hr>
+                <div class="input-forms">
+                    <!--this form only applies when "first degree" is selected-->
+                    <form id="first-degree-form">
+                        <p>Fill in the coeficients from the linear equation:</p>
+                        <fieldset>
+                            <div class="input-block">
+                                <label for="fd-a">Coeficient A</label>
+                                <!-- title="Insert 𝑥 coeficient   -    Ex: 2𝑥 + 6, coeficient A = 2" -->
+                                <svg class="input-info-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <linearGradient id="gradient-info-icon">
+                                        <stop offset="18.07%" stop-color="var(--color-stop-1)" />
+                                        <stop offset="50.53%" stop-color="var(--color-stop-2)" />
+                                    </linearGradient>
+                                    <path
+                                        d="M7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15ZM8.125 11.25H6.875V6.25H8.125V11.25ZM7.5 3.59375C7.93125 3.59375 8.28125 3.94375 8.28125 4.375C8.28125 4.80625 7.93125 5.15625 7.5 5.15625C7.06875 5.15625 6.71875 4.80625 6.71875 4.375C6.71875 3.94375 7.06875 3.59375 7.5 3.59375Z"
+                                        fill="#8FA7B2" fill-opacity="0.5" />
+                                </svg>
 
-                    <a class="calculate-button" onclick="calculate()">
-                        Calculate
-                    </a>
+                                <input id="fd-a" name="fd-a" placeholder="𝑥" required>
+                            </div>
+                            <div class="input-block">
+                                <label for="fd-b">Coeficient B</label>
+
+                                <!-- Tooltip: Insert independent coeficient   -    Ex: 2𝑥 + 6, coeficient B = 6 -->
+                                <svg class="input-info-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <linearGradient id="gradient-info-icon">
+                                        <stop offset="18.07%" stop-color="var(--color-stop-1)" />
+                                        <stop offset="50.53%" stop-color="var(--color-stop-2)" />
+                                    </linearGradient>
+                                    <path
+                                        d="M7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15ZM8.125 11.25H6.875V6.25H8.125V11.25ZM7.5 3.59375C7.93125 3.59375 8.28125 3.94375 8.28125 4.375C8.28125 4.80625 7.93125 5.15625 7.5 5.15625C7.06875 5.15625 6.71875 4.80625 6.71875 4.375C6.71875 3.94375 7.06875 3.59375 7.5 3.59375Z"
+                                        fill="#8FA7B2" fill-opacity="0.5" />
+                                </svg>
+
+                                <input id="fd-b" name="fd-b" placeholder="𝒃" required>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <!--this form only applies when "second degree" is selected-->
+                    <form id="second-degree-form" class="deactive">
+                        <p>Fill in the coeficients from the quadratic equation:</p>
+                        <fieldset>
+                            <!--A-->
+                            <div class="input-block">
+                                <label for="sd-a">Coeficient A</label>
+                                <!-- Tooltip: Insert 𝑥² coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient A = 4 -->
+                                <svg class="input-info-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <linearGradient id="gradient-info-icon">
+                                        <stop offset="18.07%" stop-color="var(--color-stop-1)" />
+                                        <stop offset="50.53%" stop-color="var(--color-stop-2)" />
+                                    </linearGradient>
+                                    <path
+                                        d="M7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15ZM8.125 11.25H6.875V6.25H8.125V11.25ZM7.5 3.59375C7.93125 3.59375 8.28125 3.94375 8.28125 4.375C8.28125 4.80625 7.93125 5.15625 7.5 5.15625C7.06875 5.15625 6.71875 4.80625 6.71875 4.375C6.71875 3.94375 7.06875 3.59375 7.5 3.59375Z"
+                                        fill="#8FA7B2" fill-opacity="0.5" />
+                                </svg>
+
+                                <input type="number" placeholder="𝑎𝑥²" id="sd-a" name="sd-a" required>
+                            </div>
+
+                            <!--B-->
+                            <div class="input-block">
+                                <label for="sd-b">Coeficient B</label>
+                                <!-- Tooltip: Insert 𝑥 coeficient    -    Ex: 4𝑥² + 2𝑥 + 6, coeficient B = 2 -->
+                                <svg class="input-info-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <linearGradient id="gradient-info-icon">
+                                        <stop offset="18.07%" stop-color="var(--color-stop-1)" />
+                                        <stop offset="50.53%" stop-color="var(--color-stop-2)" />
+                                    </linearGradient>
+                                    <path
+                                        d="M7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15ZM8.125 11.25H6.875V6.25H8.125V11.25ZM7.5 3.59375C7.93125 3.59375 8.28125 3.94375 8.28125 4.375C8.28125 4.80625 7.93125 5.15625 7.5 5.15625C7.06875 5.15625 6.71875 4.80625 6.71875 4.375C6.71875 3.94375 7.06875 3.59375 7.5 3.59375Z"
+                                        fill="#8FA7B2" fill-opacity="0.5" />
+                                </svg>
+
+                                <input type="number" placeholder="𝑏𝑥" id="sd-b" name="sd-b" required>
+                            </div>
+
+                            <!--C-->
+                            <div class="input-block">
+                                <label for="sd-c">Coeficient C</label>
+                                <!-- Tooltip: Insert independent coeficient   -    Ex: 4𝑥² + 2𝑥 + 6, coeficient C = 6-->
+                                <svg class="input-info-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <linearGradient id="gradient-info-icon">
+                                        <stop offset="18.07%" stop-color="var(--color-stop-1)" />
+                                        <stop offset="50.53%" stop-color="var(--color-stop-2)" />
+                                    </linearGradient>
+                                    <path
+                                        d="M7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15ZM8.125 11.25H6.875V6.25H8.125V11.25ZM7.5 3.59375C7.93125 3.59375 8.28125 3.94375 8.28125 4.375C8.28125 4.80625 7.93125 5.15625 7.5 5.15625C7.06875 5.15625 6.71875 4.80625 6.71875 4.375C6.71875 3.94375 7.06875 3.59375 7.5 3.59375Z"
+                                        fill="#8FA7B2" fill-opacity="0.5" />
+                                </svg>
+                                <input type="number" placeholder="𝑐" id="sd-c" name="sd-c" required>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <a class="calculate-button" onclick="calculate()">
+                    Calculate
+                </a>
             </div>
         </main>
     </div>
-    <script src="./public/js/second-degree.js"></script>
-    <script src="./public/js/toggle-equation.js"></script>
+
+<!-- END PAGE INPUT-->
+
+
+<!-- PAGE OUTPUT - [RESULTS PAGE]-->
+    <div id="page-output">
+        <aside id="output-aside" class="animation-move-right">
+            <header>
+                <h3>Results</h3>
+            </header>
+            <div class="output-roots">
+                <p>Positive discriminant; Therefore two positive real roots:</p>
+                <h1 id="output-roots">( x1 , x2 )</h1>
+            </div>
+
+            <hr>
+
+            <div class="result-vertex">
+                <p>Parable vertexes</p>
+                <h1 id="output-vertex">( x , y )</h1>
+            </div>
+
+            <hr>
+
+
+            <div class="result-delta">
+                <p>Delta</p>
+                <h1 id="output-delta">D = .....</h1>
+            </div>
+
+            <hr>
+            <div class="result-intercept">
+                <p>Intercept with Y Axis (x = 0)</p>
+                <h1>( x , y)</h1>
+            </div>
+
+            <a onclick="returnToInputPage()">Return</a>
+        </aside>
+
+        <section>
+            <div class="graph" id="graph">
+
+            </div>
+        </section>
+
+
+
+        <div class="output-buttons-container" id="output-buttons-container">
+            
+            <div class="output-buttons">
+
+                <!--documentation-->
+                <a target="_blank" href="./documentation/documentation-index.html" title="Check our documentation">
+                    <img src="./public/images/icon_document.svg" alt="Documentation">
+                </a>
+    
+                <!--github-->
+                <a href="https://github.com/ruymon/BhasKalc" target="_blank" title="Visit our repository">
+                    <img src="./public/images/github.svg" alt="Github">
+                </a>
+    
+                <!--darkmode-->
+                <a title="Toggle dark/light mode">
+                    <img src="./public/images/icon_moon.svg" alt="Darkmode">
+                </a>
+            </div>
+            
+        </div>
+        
+
+    </div>
+
+<!-- END PAGE OUTPUT-->
+
 </body>
 
 </html>

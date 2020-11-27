@@ -1,4 +1,9 @@
-aside{
+#page-output{
+    height: 100%;
+    width: 100%;
+}
+
+#page-output aside{
     background-color: #ffffff;
     
     padding: 2vw;
@@ -7,14 +12,14 @@ aside{
     width: 30vw;
 }
 
-aside header h3{
+#page-output aside header h3{
     color: #4D6F80;
     font-size: clamp(2vw, 3rem, 5vw);
 
     margin-bottom: 2vh;
 }
 
-aside div {
+#page-output aside div {
     color: #8FA7B2;
 
     font-weight: 600;
@@ -24,17 +29,17 @@ aside div {
     margin: 1.5vh 0;
 }
 
-aside div h1{
+#page-output aside div h1{
     margin: 2vh 0;
     text-align: center;
     font-size: clamp(2vw, 5rem, 5vw);
 }
 
-aside hr{
+#page-output aside hr{
     border: 1px solid #D3E2E5;
 }
 
-aside a{
+#page-output aside a{
     background-color: #37C77F;
     text-decoration: none;
     color: #ffffff;
@@ -54,26 +59,98 @@ aside a{
     background-color: #CEDEE5;
 }
 
+
+#page-output .output-buttons-container{
+
+    z-index: 10;
+
+    position: fixed;
+    right: 0;
+    
+    height: 100%;
+    padding: 4rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    overflow: hidden;
+
+    
+}
+
+#page-output .output-buttons a:hover {
+    opacity: 100%;
+    transition: background-color 200ms;
+}
+
+#page-output .output-buttons a {
+
+    width: 4.8rem;
+    height: 4.8rem;
+    border: none;
+
+    background-color: #12afcd;
+
+    border: 0;
+    border-radius: 1.6rem;
+
+    opacity: 40%;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    margin-top: 2rem;
+
+    outline: none;
+
+    
+}
+
+#page-output .output-buttons a img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+
+    opacity: 30%;
+
+    transition: opacity 200s;
+}
+
+#page-output .output-buttons a:hover {
+    background-color: #17D6EB; 
+}
+
+#page-output .output-buttons a img:hover {
+    opacity: 100%;
+}
+
+
 @media (max-width: 500px){
-    aside{
+    #page-output aside{
         padding-top: 3vh;
         min-width: 100vw;
     }
 
-    aside div h1{
+    #page-output aside div h1{
         font-size: clamp(5vw, 5rem, 8vw);
     }
 
-    aside div {
+    #page-output aside div {
 
         font-size: clamp(2vw, 2rem, 6vw);
     }
 
-    aside header h3{
+    #page-output aside header h3{
         font-size: clamp(8vw, 11vw, 12vw);
     }
 
-    header h1{
+    #page-output header h1{
         font-size: clamp(10vw, 12vw, 13vw);
     }
 

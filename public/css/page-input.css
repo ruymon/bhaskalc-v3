@@ -1,8 +1,122 @@
+:root {
+
+/*==================*/
+/* -> Light Mode <- */
+/*==================*/
+
+    /* --------- INPUT Page ---------- */
+
+    --main-light-bg: #CEDEE5;
+
+    /* Input Form */
+    --main-light-input-page-bg: #ffffff;
+    --main-light-input-page-bg-border: #D3E2E5;
+
+    /* Input Form Text */
+    --main-light-input-header: #4D6F80;
+    --main-light-input-p: #8FA7B2;
+
+    /* Input Form Buttons */
+    --main-light-input-button-bg: #f5f8fa;
+    --main-light-input-button-border: #d3e2e5;
+
+    --main-light-input-button-a: #8fa7b2;
+
+    /* Input Form Button Hover */
+    --main-light-input-button-bg-hover: #EFFEFF;
+    --main-light-input-button-border-hover: #D3E2E5;
+
+    /* Input Buttons Divider */
+    --main-light-input-button-divider: #d3e2e5;
+
+    --main-light-input-hr: #D3E2E5;
+    
+    /* ----------- Input Client ---------- */
+
+    /* Input Label */
+    --main-light-input-label: #8FA7B2;
+
+    /* Input Form */
+    --main-light-input-bg: #F5F8FA;
+    --main-light-input-bg-border: #d2e2e5;
+    
+    --main-light-input-text-color: #8FA7B2;
+
+    /* Input Form Placeholder */
+    --main-light-input-placeholder-color: #8FA7B2;
+
+    /* ----------- Input Calculate Button -------- */
+
+    --main-light-input-calculate-button-bg: #37C77F;
+    --main-light-input-calculate-button-color: #ffffff;
+
+    /* Button Hover */
+    --main-light-input-calculate-button-bg-hover: #3EE08F;
+
+
+/*=================*/
+/* -> Dark Mode <- */
+/*=================*/
+
+    /* --------- INPUT Page ---------- */
+
+    --main-dark-bg: #CEDEE5;
+
+    /* Input Form */
+    --main-dark-input-page-bg: #ffffff;
+    --main-dark-input-page-bg-border: #D3E2E5;
+
+    /* Input Form Text */
+    --main-dark-input-header: #4D6F80;
+    --main-dark-input-p: #8FA7B2;
+
+    /* Input Form Buttons */
+    --main-dark-input-button-bg: #f5f8fa;
+    --main-dark-input-button-border: #d3e2e5;
+
+    --main-dark-input-button-a: #8fa7b2;
+
+    /* Input Form Button Hover */
+    --main-dark-input-button-bg-hover: #EFFEFF;
+    --main-dark-input-button-border-hover: #D3E2E5;
+
+    /* Input Buttons Divider */
+    --main-dark-input-button-divider: #d3e2e5;
+
+    --main-dark-input-hr: #D3E2E5;
+    
+    /* ----------- Input Client ---------- */
+
+    /* Input Label */
+    --main-dark-input-label: #8FA7B2;
+
+    /* Input Form */
+    --main-dark-input-bg: #F5F8FA;
+    --main-dark-input-bg-border: #d2e2e5;
+    
+    --main-dark-input-text-color: #8FA7B2;
+
+    /* Input Form Placeholder */
+    --main-dark-input-placeholder-color: #8FA7B2;
+
+    /* ----------- Input Calculate Button -------- */
+
+    --main-dark-input-calculate-button-bg: #37C77F;
+    --main-dark-input-calculate-button-color: #ffffff;
+
+    /* Button Hover */
+    --main-dark-input-calculate-button-bg-hover: #3EE08F;
+    
+}
+
+
+/* Page Input Div */
+
 #page-input{
-    display: flex;
+    /* display: flex; */
     height: 100%;
     width: 100%;
-    background-color: #CEDEE5;
+    background-color: var(--main-light-bg);
     background-image: url("../images/math_bg_light.svg");
     background-repeat: repeat;
     background-size: 100vh;
@@ -11,13 +125,7 @@
     
 }
 
-#page-input p{
-    color: #8FA7B2;
-    font-weight: 600;
-}
-
-
-main{
+#page-input main{
 
     flex: 1;
     display: flex;
@@ -25,25 +133,24 @@ main{
 
 }
 
+/* Input Form Area */
+
 .input-area{
 
     padding: 5.7rem;
     z-index: 10;
 
     margin: auto;
-     
-    /* margin-top: 5rem;    <-- XGH Eh coisa de manicaca!!!! */
+    
+    background-color: var(--main-light-input-page-bg);
 
-    background-color: white;
-
-    /* height: clamp(80vh, 90vh, 80vh); */
 
     width: clamp(30rem, 60rem, 60rem);
 
     box-sizing: border-box;
 
     border-radius: 3rem;
-    border: 1px solid #D3E2E5;
+    border: 1px solid var(--main-light-input-page-bg-border);
     
 }
 
@@ -55,15 +162,19 @@ main{
 .input-area header h1{
     font-weight: 600;
     font-size: 6rem;
-    color: #4D6F80;
+    color:  var(--main-light-input-header);
     margin-bottom: 2rem;
 }
 
+.input-area p{
+    color: var(--main-light-input-p);
+    font-weight: 500;
+}
 
 .input-buttons{
-    background-color: #f5f8fa;
+    background-color: var(--main-light-input-button-bg);
     border-radius: 2rem;
-    border: 1px solid #d3e2e5;
+    border: 1px solid var(--main-light-input-button-border);
 
     display: flex;
     align-items: center;
@@ -78,13 +189,13 @@ main{
     padding-top: 1.15vh;
 
     text-align: center;
-
+    
     width: 100%;
     height: 100%;
 
     text-decoration: none;
 
-    color: #8fa7b2;
+    color: var(--main-light-input-button-a);
     font: 600 1.6rem/1 'Nunito', sans-serif;
 
     transition: background 0.3s, border-radius 0.3s, border-color 0.3s;
@@ -95,19 +206,19 @@ main{
 }
 
 #first-degree:hover{
-    background: #EFFEFF;
-    border-color: #D3E2E5;
+    background: var(--main-light-input-button-bg-hover);
+    border-color: var(--main-light-input-button-border-hover);
     border-radius: 2rem 0 0 2rem;
 }
 
 #second-degree:hover{
-    background: #EFFEFF;
-    border-color: #D3E2E5;
+    background: var(--main-light-input-button-bg-hover);
+    border-color: var(--main-light-input-button-border-hover);
     border-radius: 0 2rem 2rem 0;
 }
 
 .input-buttons-border {
-    border-left: 2px solid #d3e2e5;
+    border-left: 2px solid var(--main-light-input-button-divider);
     height: 100%;
 }
 
@@ -122,15 +233,15 @@ main{
     margin-right: clamp(15rem, 18rem, 18rem);
 }
 
-hr{
+#page-input hr{
     height: 1px;
-    border-top: 1px solid #D3E2E5;
+    border-top: 1px solid  var(--main-light-input-hr);
     width: 100%;
     margin: 3rem 0;
 }
 
 
-form fieldset{
+#page-input form fieldset{
     margin-top: 2rem;
     display: block;
     border: 0;
@@ -140,10 +251,12 @@ form fieldset{
     margin-top: 3rem;
 }
 
+
 .input-block label{
-    color: #8FA7B2;
+    color: var(--main-light-input-label);
     font-weight: 600;
 }
+
 
 .input-block input{
     width: 100%;
@@ -151,25 +264,38 @@ form fieldset{
 
     margin-top: 1rem;
 
-    background-color: #F5F8FA;
+    background-color: var(--main-light-input-bg);
 
     border-radius: 2rem;
-    border: 1px solid #d2e2e5;
+    border: 1px solid var(--main-light-input-bg-border);
 
-    color:#8FA7B2;
+    color: var(--main-light-input-text-color);
     padding: 0 1rem;
 }
+
 .input-block input::placeholder{
+    color: var(--main-light-input-placeholder-color);
+}
+ 
+/* Input Info Icon */
 
-    color:#8FA7B2;
+#gradient-info-icon {
+    --color-stop-1: #15B6D6;
+    --color-stop-2: #15D6D6;
+}
 
+.input-info-icon:hover path {
+    fill-opacity: 0.8;
+    fill: url(#gradient-info-icon) #15B6D6;
+
+    transition: background-color 0.3s;
 }
 
 .calculate-button{
     text-decoration: none;
 
-    background-color: #37C77F;
-    color: #ffffff;
+    background-color: var(--main-light-input-calculate-button-bg);
+    color: var(--main-light-input-calculate-button-color);
 
     font: 800 2rem/1 'Nunito', sans-serif;
 
@@ -188,10 +314,10 @@ form fieldset{
 }
 
 .calculate-button:hover{
-    background-color: #3EE08F;
+    background-color: var(--main-light-input-calculate-button-bg-hover);
 }
 
-input{
+#page-input input{
     outline: none;
 }
 
@@ -212,12 +338,12 @@ input{
     .input-area header h1{
         font-weight: 700;
         font-size: 4rem;
-        color: #4D6F80;
+        color: var(--main-light-input-header);
     }
     .input-area p{
         font-weight: 700;
         font-size: clamp(2vw, 1.5rem, 5vw);
-        color: #4D6F80;
+        color: var(--main-light-input-p);
     }
 
     .input-buttons{
@@ -233,23 +359,23 @@ input{
         margin-right: clamp(5rem, 6rem, 10rem);
     }
 
-    hr{
+    #page-input hr{
         margin: 3vh 0;
     }
 
-    form fieldset{
+    #page-input form fieldset{
         margin-top: 3vh
     }
 
-    form fieldset .input-block label{
+    #page-input form fieldset .input-block label{
         font-size: clamp(1vh, 1.5rem, 3vh);
     }
 
-    form fieldset .input-block + .input-block{
+    #page-input form fieldset .input-block + .input-block{
         margin-top: 2vh;
     }
 
-    form fieldset .input-block input{
+    #page-input form fieldset .input-block input{
         height: 8vh;
     }
 

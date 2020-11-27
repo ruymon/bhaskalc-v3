@@ -17,38 +17,106 @@ var vertexY;
 
 var intercept;
 
-function calculate(){
-    const A = document.getElementById("sd-a").value;
-    const B = document.getElementById("sd-b").value;
-    const C = document.getElementById("sd-c").value;
+// Second Degree Calculation
 
-    calculateDelta(A, B, C);
-    calculateRoots(A, B, delta);
-    calculateVertex(A, B, delta);
-    //the y intercept is calculated by x = 0, so intercept = C.
-    intercept = C;
-
-    console.log("Delta: " + delta);
-    console.log("Roots: " + root1 + " , " + root2);
-    console.log("Vertexes: " + vertexX.toString() + " , " + vertexY.toString());
-    console.log("Intercept: " + C);
+function calculateDelta(A, B, C) {
+    delta = Math.pow(B, 2) - 4 * A * C;
 }
 
-function calculateDelta(A, B, C){
-        delta = Math.pow(B, 2) - 4*A*C;
-}
-
-function calculateRoots(A, B, delta){
-    if(delta >= 0){
-        root1 = (-B + Math.sqrt(delta))/2*A
-        root2 = (-B - Math.sqrt(delta))/2*A
-    } else{
+function calculateRoots(A, B, delta) {
+    if (delta >= 0) {
+        root1 = (-B + Math.sqrt(delta)) / 2 * A
+        root2 = (-B - Math.sqrt(delta)) / 2 * A
+    } else {
         alert('Delta is negative (Still not supported!)');
         console.log("ERROR: Negative delta.")
     }
 }
 
-function calculateVertex(A, B, delta){
-    vertexX = (B * -1) / (2*A) ;
+function calculateVertex(A, B, delta) {
+    vertexX = (B * -1) / (2 * A);
     vertexY = (delta / (4 * A)) * -1;
+}
+
+function calculate() {
+    document.getElementById('page-input').style.display = 'none';
+    document.getElementById('page-output').style.display = 'flex';
+
+    calculateOutputSizes()
+
+    setTimeout(() =>{
+        const A = document.getElementById("sd-a").value;
+        const B = document.getElementById("sd-b").value;
+        const C = document.getElementById("sd-c").value;
+    
+        // Input Validation
+        if (isNaN(A) || isNaN(B) || isNaN(C)) {
+            alert('Faltando parametros.');
+            returnToInputPage();
+            return;
+        }
+    
+        if (A == 0) {
+            alert('O Coeficiente A não pode ser 0.');
+            returnToInputPage();
+            return;
+        };
+    
+    
+        calculateDelta(A, B, C);
+        calculateRoots(A, B, delta);
+        calculateVertex(A, B, delta);
+        //the y intercept is calculated by x = 0, so intercept = C.
+        intercept = C;
+    
+        
+    
+        console.log("Delta: " + delta);
+        console.log("Roots: " + root1 + " , " + root2);
+        console.log("Vertexes: " + vertexX.toString() + " , " + vertexY.toString());
+        console.log("Intercept: " + C);
+    
+
+    
+        showOutput(delta, root1, root2, vertexX, vertexY, A, B, C);
+
+    }, 100);
+}
+
+
+
+
+// Show Calculated Data
+
+function showOutput(graphWidth, graphHeight, delta, root1, root2, vertexX, vertexY, A, B, C) {
+    document.getElementById('output-roots').innerHTML = '(' + root1 + ',' + root2 + ')';
+    document.getElementById('output-vertex').innerHTML = '(' + vertexX.toString() + ',' + vertexY.toString() + ')';
+    document.getElementById('output-delta').innerHTML = delta;
+
+    // Make Graph
+    functionPlot({
+        target: document.querySelector("#graph"),
+        // width: `${(outputSidebarWidth - outputButtonsWidth) - 20}`,
+        // height: `${browserHeight - 10}`,
+        width: 500,
+        height: 500,
+        yAxis: {
+            domain: [-1, 9]
+        },
+        grid: true,
+        data: [{
+            // fn: 'x^2 + 2x + 3', // f(x) = ax² + bx + c
+            fn: `${A}x^2 + ${B}x + ${C}`
+        }]
+    });
+
+}
+
+
+
+// Return to Input Page calculated
+
+function returnToInputPage() {
+    document.getElementById('page-output').style.display = 'none';
+    document.getElementById('page-input').style.display = 'flex';
 }

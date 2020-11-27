@@ -19,84 +19,16 @@ body{
     font-family: 'Titillium Web', sans-serif;
 }
 
-.page-mobile-warn {
+/* Pages Display */
+
+#page-loader {
+    display: flex;
+}
+
+#page-input {
     display: none;
 }
 
-@media (max-width: 500px) {
-    /* body {
-        background-color: #29292E;
-
-    }
-
-    #page-input{
-        
-        display: none !important; 
-    }
-
-    .page-mobile-warn {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-
-                
-        height: 100%;
-        width: 100%;
-
-
-        overflow: hidden;
-    }
-
-    .mobile-warn-header {
-        padding-top: 5vh;
-
-        height: 50%;
-        width: 50%;
-
-    }
-
-
-
-    .mobile-warn-header h1 {
-        margin: 0;
-
-        font-weight: bold;
-        font-size: 3.5rem;
-
-        color: white;
-    }
-
-    .mobile-warn-header img {
-        width: 30%;
-    }
-
-    .mobile-warn-main {
-        padding: 0 1rem;
-        position: absolute;
-        bottom: 0;
-
-        margin-bottom: 15vh;
-
-    }
-
-    .mobile-warn-main img {
-        width: 70%;
-        height: auto;
-        padding-bottom: 10px;
-    } 
-    .mobile-warn-main p {
-        
-        height: 20%;
-
-        padding: 0 1rem;
-        font-weight: regular;
-        font-size: 2.5rem;
-        
-        color: white;
-
-        text-align: center;
-
-    } */
-    
-    
+#page-output {
+    display: none;
 }
