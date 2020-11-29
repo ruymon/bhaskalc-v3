@@ -1,0 +1,123 @@
+:root {
+
+    /*==================*/
+    /* -> Light Mode <- */
+    /*==================*/
+    
+    /* --------- INPUT Page ---------- */
+    
+        --main-light-bg: #CEDEE5;
+    
+        /* Input Form */
+        --main-light-input-page-bg: #ffffff;
+        --main-light-input-page-bg-border: #D3E2E5;
+    
+        /* Input Form Text */
+        --main-light-input-header: #4D6F80;
+        --main-light-input-p: #8FA7B2;
+    
+        /* Input Form Buttons */
+        --main-light-input-button-bg: #f5f8fa;
+        --main-light-input-button-border: #d3e2e5;
+    
+        --main-light-input-button-a: #8fa7b2;
+    
+        /* Input Form Button Hover */
+        --main-light-input-button-bg-hover: #EFFEFF;
+        --main-light-input-button-border-hover: #D3E2E5;
+    
+        /* Input Buttons Divider */
+        --main-light-input-button-divider: #d3e2e5;
+    
+        --main-light-input-hr: #D3E2E5;
+        
+        /* ----------- Input Client ---------- */
+    
+        /* Input Label */
+        --main-light-input-label: #8FA7B2;
+    
+        /* Input Form */
+        --main-light-input-bg: #F5F8FA;
+        --main-light-input-bg-border: #d2e2e5;
+        
+        --main-light-input-text-color: #8FA7B2;
+    
+        /* Input Form Placeholder */
+        --main-light-input-placeholder-color: #8FA7B2;
+    
+        /* ----------- Input Calculate Button -------- */
+    
+        --main-light-input-calculate-button-bg: #37C77F;
+        --main-light-input-calculate-button-color: #ffffff;
+    
+        /* Button Hover */
+        --main-light-input-calculate-button-bg-hover: #3EE08F;
+    
+    /* END INPUT PAGE */
+
+    /* OUTPUT PAGE */
+
+
+        /* Graph Colors */
+        
+        --main-light-output-graph-line: #12afcd;
+        --main-light-output-graph-text: #4D6F80;
+        --main-light-output-graph-axis: #000000;
+        --main-light-output-graph-circle: #4D6F80-;
+    
+    
+    /*=================*/
+    /* -> Dark Mode <- */
+    /*=================*/
+    
+    /* --------- INPUT Page ---------- */
+    
+        --main-dark-bg: #CEDEE5;
+    
+        /* Input Form */
+        --main-dark-input-page-bg: #ffffff;
+        --main-dark-input-page-bg-border: #D3E2E5;
+    
+        /* Input Form Text */
+        --main-dark-input-header: #4D6F80;
+        --main-dark-input-p: #8FA7B2;
+    
+        /* Input Form Buttons */
+        --main-dark-input-button-bg: #f5f8fa;
+        --main-dark-input-button-border: #d3e2e5;
+    
+        --main-dark-input-button-a: #8fa7b2;
+    
+        /* Input Form Button Hover */
+        --main-dark-input-button-bg-hover: #EFFEFF;
+        --main-dark-input-button-border-hover: #D3E2E5;
+    
+        /* Input Buttons Divider */
+        --main-dark-input-button-divider: #d3e2e5;
+    
+        --main-dark-input-hr: #D3E2E5;
+        
+        /* ----------- Input Client ---------- */
+    
+        /* Input Label */
+        --main-dark-input-label: #8FA7B2;
+    
+        /* Input Form */
+        --main-dark-input-bg: #F5F8FA;
+        --main-dark-input-bg-border: #d2e2e5;
+        
+        --main-dark-input-text-color: #8FA7B2;
+    
+        /* Input Form Placeholder */
+        --main-dark-input-placeholder-color: #8FA7B2;
+    
+        /* ----------- Input Calculate Button -------- */
+    
+        --main-dark-input-calculate-button-bg: #37C77F;
+        --main-dark-input-calculate-button-color: #ffffff;
+    
+        /* Button Hover */
+        --main-dark-input-calculate-button-bg-hover: #3EE08F;
+        
+    }
+    
