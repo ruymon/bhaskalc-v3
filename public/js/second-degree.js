@@ -98,9 +98,10 @@ function calculate() {
 
 function showOutput(browserHeight, browserWidth, outputButtonsWidth, outputSidebarWidth, delta, root1, root2, vertexX, vertexY, A, B, C) {
 
-    document.getElementById('output-roots').innerHTML = '(' + root1 + ',' + root2 + ')';
+    document.getElementById('output-roots').innerHTML = '( ' + root1 + ' , ' + root2 + ' )';
     document.getElementById('output-vertex').innerHTML = '(' + vertexX.toString() + ',' + vertexY.toString() + ')';
-    document.getElementById('output-delta').innerHTML = delta;
+    document.getElementById('output-delta').innerHTML = 'Δ = '+ delta;
+    document.getElementById('output-intercept').innerHTML = '( '+ '0' + ' , '+C + ' )';
 
     const graphWidth = browserWidth - (outputSidebarWidth + outputButtonsWidth);
     const graphHeight = browserHeight - 10;
