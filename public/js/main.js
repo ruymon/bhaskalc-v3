@@ -7,34 +7,34 @@ function loadingScreenTimer() {
         }, 2900)
     };
 
-// Calculate Screen Size
+// // Calculate Screen Size
 
-let browserWidth;
-let browserHeight;
+// let browserWidth;
+// let browserHeight;
 
-let outputSidebarWidth;
-let outputSidebarHeight;
+// let outputSidebarWidth;
+// let outputSidebarHeight;
 
-let outputButtonsWidth;
-let outputButtonsHeight;
+// let outputButtonsWidth;
+// let outputButtonsHeight;
 
 
-function calculateOutputSizes() {
+// function calculateOutputSizes() {
 
-    //Get Browser Windos Sizes
-    browserWidth = $(window).width();
-    browserHeight = $(window).height();
+//     //Get Browser Windos Sizes
+//     browserWidth = $(window).width();
+//     browserHeight = $(window).height();
 
-    //Get Sidebar sizes
-    var outputSidebar = document.getElementById('output-aside');
-    var sidebarPositionInfo = outputSidebar.getBoundingClientRect();
-    outputSidebarWidth = sidebarPositionInfo.width;
-    outputSidebarHeight = sidebarPositionInfo.height;
+//     //Get Sidebar sizes
+//     var outputSidebar = document.getElementById('output-aside');
+//     var sidebarPositionInfo = outputSidebar.getBoundingClientRect();
+//     outputSidebarWidth = sidebarPositionInfo.width;
+//     outputSidebarHeight = sidebarPositionInfo.height;
 
-    //Get Button Div size
-    var outputButtons = document.getElementById('output-buttons-container');
-    var buttonsPositionInfo = outputButtons.getBoundingClientRect();
-    outputButtonsWidth = buttonsPositionInfo.width;
-    outputButtonsHeight = buttonsPositionInfo.height;
+//     //Get Button Div size
+//     var outputButtons = document.getElementById('output-buttons-container');
+//     var buttonsPositionInfo = outputButtons.getBoundingClientRect();
+//     outputButtonsWidth = buttonsPositionInfo.width;
+//     outputButtonsHeight = buttonsPositionInfo.height;
 
-};
+// };
