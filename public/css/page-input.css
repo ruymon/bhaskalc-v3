@@ -26,7 +26,10 @@
 
 .input-area{
 
-    padding: 5.7rem;
+    padding-top: clamp(5rem, 6vh, 10rem);
+    padding-left: clamp(1rem, 6vw, 6rem);
+    padding-bottom: clamp(5rem, 6vh, 10rem);
+    padding-right: clamp(1rem, 6vw, 6rem);
     z-index: 10;
 
     margin: auto;
@@ -60,6 +63,12 @@
     font-weight: 500;
 }
 
+.input-area h4{
+    color: var(--main-light-input-p);
+    font-weight: 600;
+    font-size: 3rem;
+}
+
 .input-buttons{
     background-color: var(--main-light-input-button-bg);
     border-radius: 2rem;
@@ -71,11 +80,11 @@
     margin: 2rem auto 1rem;
 
     width: 100%;
-    height: 4rem;
+    height: clamp(3rem, 3.5vh, 4rem);
 }
 
 .input-buttons a{
-    padding-top: 1.15vh;
+    padding-top: 0.7rem;
 
     text-align: center;
     
@@ -98,6 +107,19 @@
     background: var(--main-light-input-button-bg-hover);
     border-color: var(--main-light-input-button-border-hover);
     border-radius: 2rem 0 0 2rem;
+}
+
+
+
+.first-degree-wip{
+    display: block;
+    justify-content:center;
+    align-content:center;
+}
+
+.first-degree-wip span svg{
+    
+    margin-top: 2.5rem;
 }
 
 #second-degree:hover{
@@ -126,7 +148,7 @@
     height: 1px;
     border-top: 1px solid  var(--main-light-input-hr);
     width: 100%;
-    margin: 3rem 0;
+    margin: 2vh 0;
 }
 
 
@@ -137,19 +159,19 @@
 }
 
 .input-block + .input-block{
-    margin-top: 3rem;
+    margin-top: 3vh;
 }
 
 
 .input-block label{
     color: var(--main-light-input-label);
-    font-weight: 600;
+    font-weight: clamp(400, 600, 800);
 }
 
 
 .input-block input{
     width: 100%;
-    height: 6rem;
+    height: clamp(4rem, 6vh, 7vh);
 
     margin-top: 1rem;
 
@@ -189,15 +211,16 @@
     font: 800 2rem/1 'Nunito', sans-serif;
 
     border-radius: 2rem;
-    margin-top: 6vh;
+    margin-top: 2rem;
 
     justify-content: center;
     text-align: center;
     display: block;
     
     width: 100%;
+    height: clamp(2rem, 9vh, 9rem);
 
-    padding: 30px;
+    padding-top: clamp(3.1vh, 3vh, 3vh);
     transition: background-color 300ms;
     
 }
@@ -217,7 +240,7 @@
 
     .input-area{
         margin: 0;
-        padding: 5vh   clamp(2vw, 5vw, 6vw);
+        padding: clamp(2vh, 5rem, 0.5vh)   clamp(2vw, 5vw, 6vw);
         border-radius: 0;
 
         height: 100vh;

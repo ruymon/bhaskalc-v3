@@ -64,7 +64,7 @@ aside .sidebar footer a img:hover {
 
 @media (max-width: 500px) {
 
-    aside{
+    aside .sidebar{
         display: none;
 
     }

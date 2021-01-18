@@ -55,7 +55,73 @@
   margin-top: 6vh;
 }
 
-#page-output .output-buttons-container {
+@media (max-width: 500px) {
+  #page-output aside {
+    padding-top: 3vh;
+    min-width: 100vw;
+  }
+
+  #page-output aside div h1 {
+    font-size: clamp(5vw, 5rem, 8vw);
+  }
+
+  #page-output aside div {
+    font-size: clamp(2vw, 2rem, 6vw);
+  }
+
+  #page-output aside header h3 {
+    font-size: clamp(8vw, 11vw, 12vw);
+  }
+
+  #page-output header h1 {
+    font-size: clamp(10vw, 12vw, 13vw);
+  }
+
+  .content h3 {
+    font-size: clamp(7vw, 7vw, 9vw);
+  }
+
+  .content p {
+    font-size: clamp(2.5vw, 3vw, 4vw);
+  }
+}
+
+
+/* Graph Style */
+
+#graph {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#graph svg {
+  margin: 50px;
+}
+
+.graphStyle path.line {
+  stroke: var(--main-light-output-graph-line);
+}
+  
+.graphStyle text {
+  font-size: 15px;
+  fill: var(--main-light-output-graph-text);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.graphStyle path.origin {
+  stroke: var(--main-light-output-graph-axis);
+}
+
+.graphStyle .tip circle {
+  fill: var(--main-light-output-graph-circle);
+}  
+
+
+
+/* BUTTONS SIDEBAR - TODO FEATURE */
+
+/* #page-output .output-buttons-container {
   z-index: 10;
 
   position: fixed;
@@ -117,62 +183,5 @@
 
 #page-output .output-buttons a img:hover {
   opacity: 100%;
-}
+} */
 
-@media (max-width: 500px) {
-  #page-output aside {
-    padding-top: 3vh;
-    min-width: 100vw;
-  }
-
-  #page-output aside div h1 {
-    font-size: clamp(5vw, 5rem, 8vw);
-  }
-
-  #page-output aside div {
-    font-size: clamp(2vw, 2rem, 6vw);
-  }
-
-  #page-output aside header h3 {
-    font-size: clamp(8vw, 11vw, 12vw);
-  }
-
-  #page-output header h1 {
-    font-size: clamp(10vw, 12vw, 13vw);
-  }
-
-  .content h3 {
-    font-size: clamp(7vw, 7vw, 9vw);
-  }
-
-  .content p {
-    font-size: clamp(2.5vw, 3vw, 4vw);
-  }
-}
-
-
-/* Graph Style */
-
-#graph {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.graphStyle path.line {
-  stroke: var(--main-light-output-graph-line);
-}
-  
-.graphStyle text {
-  font-size: 15px;
-  fill: var(--main-light-output-graph-text);
-  font-family: 'Titillium Web', sans-serif;
-}
-
-.graphStyle path.origin {
-  stroke: var(--main-light-output-graph-axis);
-}
-
-.graphStyle .tip circle {
-  fill: var(--main-light-output-graph-circle);
-}  
